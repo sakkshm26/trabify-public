@@ -1,0 +1,121 @@
+.home h1{
+    font-family: 'Yesteryear', cursive;
+}
+
+.home a{
+    text-decoration: none;
+}
+
+.home .bottom{
+    background: url('../../assets/books.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.home button{
+    position: relative;
+	display: flex;
+    flex-direction: row;
+	margin: 20px auto;
+	padding: 14px 10px;
+	color: rgb(41, 41, 41);
+    width: 150px;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+    border: 1px solid var(--primary);
+}
+
+.home button:after{
+    content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+    background: var(--primary);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	transform: translateX(-50%) translateY(-50%) rotate(25deg);
+}
+
+.home button:hover{
+    color: #FFF;
+	text-shadow: none;
+}
+
+.home button:hover:after{
+    height: 450%;
+}
+
+@media screen and (max-width: 400px) {
+	.home button {
+        width: 121px;
+		font-size: 12px;
+	}
+}
+
+.home hr {
+	--border-width: 2px; 
+	position: relative;
+	width: 30%;
+	height: 3px;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: var(--primary);
+	border-radius: var(--border-width);
+	border: none;
+	margin: 15px 0 40px 0;
+}
+
+.home hr::after{
+	position: absolute;
+	content: "";
+	top: calc(-1 * var(--border-width));
+	left: calc(-1 * var(--border-width));
+	z-index: -1;
+	width: calc(100% + var(--border-width) * 2);
+	height: calc(100% + var(--border-width) * 2);
+	background: linear-gradient(
+	  60deg,
+	  /* hsl(224, 85%, 66%), */
+	  hsl(269, 77%, 79%),
+	  /* hsl(314, 85%, 74%), */
+	  hsl(358, 72%, 79%),
+	  hsl(44, 83%, 73%),
+	  /* hsl(89, 85%, 66%), */
+	  hsl(134, 75%, 70%)
+	  /* hsl(179, 85%, 66%) */
+	);
+	background-size: 300% 300%;
+	background-position: 0 50%;
+	border-radius: calc(2 * var(--border-width));
+	animation: moveGradient 10s alternate infinite;
+}	
+
+@media screen and (max-width: 500px) {
+	.home hr{
+		width: 55%;
+	}
+}
+  
+@keyframes moveGradient {
+	50% {
+	  background-position: 100% 50%;
+	}
+}

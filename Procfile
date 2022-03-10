@@ -1,0 +1,1 @@
+web: gunicorn trabify.wsgi --log-file -

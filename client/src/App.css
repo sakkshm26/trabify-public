@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+body{
+  font-family: 'Harmattan', sans-serif;
+  margin: 0;
+  padding: 0;
+  --primary: #059669;
+  --secondary: #e2e8f0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #059668ad;
+  outline: 1px solid var(--primary);
+}
+
+.loading {
+  /* display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px; */
+  position:fixed;
+  top: 50%;
+  left: 49%;
+  width:30em;
+  height:18em;
+}
+.loading:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 20px solid var(--primary);
+  border-color: var(--primary) transparent var(--primary) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .loading:after{
+    border-width: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .loading{
+    left: 48%;
+  }
+}
+
+/* .load{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+} */

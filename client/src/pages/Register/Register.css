@@ -1,0 +1,22 @@
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.register h4{
+    margin-top: -60px;
+    margin-bottom: 35px;
+}
+
+.register a{
+    text-decoration: none;
+    color: black;
+}
+
+.register .error{
+    color: red;
+    bottom: 55px;
+}

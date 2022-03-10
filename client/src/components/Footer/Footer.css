@@ -1,0 +1,5 @@
+.footer .email-link{
+    color: var(--primary);
+    font-weight: bold;
+    cursor: pointer;
+}

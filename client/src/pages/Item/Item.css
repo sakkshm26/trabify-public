@@ -1,0 +1,34 @@
+.list-item .image{
+    width: 80%;
+}
+
+/* .list-item .css-uhiacx-MuiPaper-root-MuiCard-root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.list-item .description{
+    width: 90%;
+}
+
+@media screen and (max-width: 900px) {
+    .list-item .image{
+        width: 60%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .list-item .image{
+        width: 70%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .list-item .image{
+        width: 85%;
+        height: 100%;
+    }
+}
